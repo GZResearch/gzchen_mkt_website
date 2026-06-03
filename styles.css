@@ -1,0 +1,389 @@
+:root {
+  --ink: #17201c;
+  --muted: #5c6872;
+  --line: #d8dee5;
+  --paper: #ffffff;
+  --wash: #f7f9fb;
+  --green: #21635b;
+  --green-dark: #17483f;
+  --gold: #b27725;
+  --shadow: 0 18px 44px rgba(23, 32, 28, 0.11);
+}
+
+html {
+  scroll-padding-top: 5rem;
+}
+
+body {
+  color: var(--ink);
+  background: var(--paper);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.62;
+}
+
+a {
+  color: var(--green);
+}
+
+a:hover {
+  color: var(--green-dark);
+}
+
+#title-block-header {
+  display: none;
+}
+
+.navbar {
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+}
+
+.navbar-title {
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.navbar-nav .nav-link {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--green-dark);
+}
+
+#quarto-content.page-layout-full main {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 2.1rem 1.35rem 4rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--ink);
+  letter-spacing: 0;
+}
+
+h2 {
+  margin-top: 3.2rem;
+  padding-top: 0.35rem;
+  font-size: clamp(1.45rem, 1.1rem + 1vw, 2rem);
+  border-top: 1px solid var(--line);
+}
+
+h3 {
+  margin-top: 1.65rem;
+  font-size: 1.12rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: clamp(1.4rem, 4vw, 4rem);
+  align-items: center;
+  min-height: min(610px, calc(100vh - 92px));
+  padding: 1.1rem 0 2.2rem;
+}
+
+.hero-copy {
+  max-width: 720px;
+}
+
+.hero h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.1rem, 1.55rem + 2.2vw, 3.9rem);
+  line-height: 1.02;
+}
+
+.hero p {
+  max-width: 70ch;
+  color: var(--muted);
+  font-size: 1.06rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.hero p a {
+  text-decoration-skip-ink: none;
+}
+
+.btn {
+  border-radius: 7px;
+  font-weight: 700;
+  padding: 0.68rem 1rem;
+}
+
+.btn-primary {
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.btn-primary:hover {
+  background: var(--green-dark);
+  border-color: var(--green-dark);
+}
+
+.availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.1rem 0 0.4rem;
+  padding: 0.42rem 0.85rem;
+  color: var(--green-dark);
+  background: #eef5f2;
+  border: 1px solid #cfe0dc;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.availability::before {
+  content: "";
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: #25c274;
+  box-shadow: 0 0 0 3px rgba(37, 194, 116, 0.18);
+}
+
+.hero-media {
+  justify-self: end;
+  width: min(100%, 360px);
+}
+
+.hero-media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.contact-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin: 0 0 2.6rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--line);
+}
+
+.contact-item {
+  min-height: 104px;
+  padding: 1.1rem;
+  background: var(--wash);
+}
+
+.contact-item p {
+  margin: 0.2rem 0 0;
+}
+
+.interest-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin: 1rem 0 2rem;
+}
+
+.interest-list p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin: 0;
+}
+
+.interest-label {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0.46rem 0.72rem;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 650;
+}
+
+.paper-card,
+.panel,
+.education-item,
+.reference-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.paper-card {
+  margin: 1rem 0;
+  padding: 1.15rem 1.25rem;
+}
+
+.paper-card.featured {
+  background: linear-gradient(90deg, rgba(178, 119, 37, 0.08), rgba(255, 255, 255, 0) 46%);
+}
+
+.jmp-flag {
+  display: inline-block;
+  margin-bottom: 0.55rem;
+  padding: 0.24rem 0.66rem;
+  background: var(--gold);
+  color: #fff;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.paper-card p {
+  margin: 0.45rem 0 0;
+}
+
+details {
+  margin-top: 0.9rem;
+  color: var(--muted);
+}
+
+summary {
+  width: fit-content;
+  cursor: pointer;
+  color: var(--green-dark);
+  font-weight: 700;
+}
+
+.two-column,
+.education-grid,
+.reference-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.education-grid,
+.reference-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.panel,
+.education-item,
+.reference-card {
+  padding: 1rem 1.1rem;
+}
+
+.panel.full {
+  margin-top: 1rem;
+}
+
+.teaching-interests {
+  margin-bottom: 1rem;
+}
+
+.panel h3 {
+  margin-top: 0;
+}
+
+.education-item p,
+.reference-card p {
+  margin: 0.2rem 0;
+}
+
+.award-list ul {
+  columns: 2;
+  column-gap: 2rem;
+  padding-left: 1.1rem;
+}
+
+.award-list li {
+  break-inside: avoid;
+  margin-bottom: 0.45rem;
+}
+
+.cv-page {
+  width: min(100%, 920px);
+  margin: 0 auto;
+}
+
+.cv-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cv-header h1 {
+  margin: 0;
+}
+
+.cv-preview {
+  display: grid;
+  gap: 1rem;
+}
+
+.cv-preview img {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--wash);
+  box-shadow: 0 12px 30px rgba(23, 32, 28, 0.08);
+}
+
+footer.footer {
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 860px) {
+  #quarto-content.page-layout-full main {
+    padding: 1.35rem 1rem 3rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-bottom: 1.3rem;
+  }
+
+  .hero-media {
+    order: -1;
+    justify-self: center;
+  }
+
+  .hero-media img {
+    aspect-ratio: 3 / 4;
+  }
+
+  .contact-strip,
+  .two-column,
+  .education-grid,
+  .reference-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .award-list ul {
+    columns: 1;
+  }
+
+  .cv-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero h1 {
+    font-size: 2.35rem;
+  }
+
+  .contact-item {
+    min-height: auto;
+  }
+}
