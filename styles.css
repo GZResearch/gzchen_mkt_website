@@ -84,8 +84,8 @@ h2 {
 
 h3 {
   margin-top: 1.65rem;
-  font-size: 1.12rem;
-  color: var(--green);
+  font-size: 1.25rem;
+  color: var(--ink);
 }
 
 .hero {
@@ -118,6 +118,14 @@ h3 {
 
 .hero p a {
   text-decoration-skip-ink: none;
+}
+
+.email-link {
+  color: #1a9e72;
+}
+
+.email-link:hover {
+  color: #158360;
 }
 
 .btn {
