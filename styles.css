@@ -144,6 +144,32 @@ h3 {
   border-color: var(--green-dark);
 }
 
+.pdf-link {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  margin-top: 0.15rem;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.pdf-link::before,
+details > summary::before {
+  content: "";
+  width: 0;
+  height: 0;
+  margin-right: 0.4rem;
+  border-style: solid;
+  border-width: 0.3em 0 0.3em 0.42em;
+  border-color: transparent transparent transparent currentColor;
+}
+
+.pdf-link:hover {
+  color: var(--green-dark);
+}
+
 .availability {
   display: inline-flex;
   align-items: center;
@@ -244,6 +270,14 @@ h3 {
   padding: 1.15rem 1.25rem;
 }
 
+.paper-card > :first-child {
+  margin-top: 0;
+}
+
+.paper-card > :last-child {
+  margin-bottom: 0;
+}
+
 .paper-card.featured {
   background: linear-gradient(90deg, rgba(178, 119, 37, 0.08), rgba(255, 255, 255, 0) 46%);
 }
@@ -266,15 +300,28 @@ h3 {
 }
 
 details {
-  margin-top: 0.9rem;
+  margin-top: 0.45rem;
   color: var(--muted);
 }
 
 details > summary {
+  display: flex;
   width: fit-content;
+  align-items: center;
   cursor: pointer;
   color: var(--muted);
   font-weight: 600;
+  font-size: 0.9rem;
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] > summary::before {
+  border-width: 0.42em 0.3em 0 0.3em;
+  border-color: currentColor transparent transparent transparent;
 }
 
 .two-column,
