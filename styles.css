@@ -195,7 +195,7 @@ details > summary::before {
 
 .hero-media {
   justify-self: end;
-  width: min(100%, 360px);
+  width: min(100%, 300px);
 }
 
 .hero-media img {
