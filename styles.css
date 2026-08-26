@@ -302,6 +302,7 @@ details > summary::before {
 
 .paper-card p {
   margin: 0.45rem 0 0;
+  overflow-wrap: break-word;
 }
 
 details {
